@@ -17,26 +17,24 @@ public class Programmers64061 {
                     break;
                 }
             }
+
         }
-        for (int i = 0; i < box.size(); i++) {
-            if(box.get(i) == 0) box.remove(i);
-            for (int j = 0; j < box.size() - 1; j++) {
-                if (box.get(j) == box.get(j + 1)) {
-                    box.remove(j + 1);
-                    box.remove(j);
-                    answer += 2;
-                }
+        // 바구니 안에서 인형 터지는 동작
+        for (int i = 0; i < box.size() - 1; i++) {
+            if (box.get(i) == box.get(i + 1)) {
+                box.remove(i + 1);
+                box.remove(i);
+                answer += 2;
+                i = -1;
             }
         }
-
         return answer;
     }
 
     public static void main(String[] args) {
         Programmers64061 p = new Programmers64061();
-        int[][] board = {{0, 0, 0, 0, 0}, {0, 0, 1, 0, 3}, {0, 2, 5, 0, 1},
-            {4, 2, 4, 4, 2}, {3, 5, 1, 3, 1}};
-        int[] moves = {1, 5, 3, 5, 1, 2,5,1,4,3};
+        int[][] board = {{0, 2, 0}, {1, 2, 0}, {2, 2, 1}};
+        int[] moves = {1, 2, 2, 2, 1, 3};
 
         System.out.println(p.solution(board, moves));
     }
