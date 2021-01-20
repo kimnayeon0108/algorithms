@@ -1,20 +1,38 @@
 package algorithms;
 
+import java.util.ArrayList;
+
 public class Programmers42840 {
+    // 미해결 
     public int[] solution(int[] answers) {
         int[] answer = {};
-//        int[] sGroup = {getS1(answer.length), getS2(answers.length), getS3(answers.length)};
 
         int[] s1 = getS1(answers.length);
         int[] s2 = getS2(answers.length);
         int[] s3 = getS3(answers.length);
 
-        for(int i = 0; i < 3; i++){
+        int[] scores = {compareToAnswer(answers, s1), compareToAnswer(answers, s2), compareToAnswer(answers, s3)};
+        ArrayList<Integer> list = new ArrayList<>();
 
+        int max = scores[0];
+        for (int i = 0; i < scores.length; i++) {
+           if(max < scores[i]) {
+               max = scores[i];
+               list.add(i+1);
+           }
+        }
+        for(int i =0; i < scores.length; i++){
+            if(max == scores[i]) list.add(i+1);
+        }
+
+        answer = new int[list.size()];
+        for (int i = 0; i < answer.length; i++) {
+            answer[i] = list.get(i);
         }
 
         return answer;
     }
+
 
     public int[] getS1(int length) {
         // s1
@@ -60,11 +78,12 @@ public class Programmers42840 {
         return s3;
     }
 
-    public boolean compareToAnswer(int[] answers, int[] s) {
+    public int compareToAnswer(int[] answers, int[] s) {
+        int score = 0;
         for (int i = 0; i < answers.length; i++) {
-            if(answers[i] != s[i]) return false;
+            if (answers[i] == s[i]) score++;
         }
-        return true;
+        return score;
     }
 
     public static void main(String[] args) {
