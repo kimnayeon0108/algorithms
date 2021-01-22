@@ -3,7 +3,7 @@ package ndb;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class NumCardGame1 {
+public class Greedy3_1 {
     // 내 풀이 (96p 문제)
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);

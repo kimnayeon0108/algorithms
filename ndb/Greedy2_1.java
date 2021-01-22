@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
 
-public class BigNumber1 {
+public class Greedy2_1 {
     // 내 방식대로 푼 풀이
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);

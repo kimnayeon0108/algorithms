@@ -3,7 +3,7 @@ package ndb;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class BigNumber2 {
+public class Greedy2_2 {
     // 나동빈님 풀이
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
