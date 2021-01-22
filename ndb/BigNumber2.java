@@ -4,6 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class BigNumber2 {
+    // 나동빈님 풀이
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int N = s.nextInt();
