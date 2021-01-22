@@ -3,6 +3,7 @@ package ndb;
 import java.util.Scanner;
 
 public class NumCardGame2 {
+    // 나동빈님 풀이
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
