@@ -1,3 +1,5 @@
+package pass;
+
 import java.util.Scanner;
 
 public class OvenClock {
